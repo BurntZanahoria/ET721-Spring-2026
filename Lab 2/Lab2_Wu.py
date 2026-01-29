@@ -4,3 +4,7 @@ Lab 2: Mastering Git workflow
 """
 username = input("Enter a username: ")
 print(f"Welcome to Git commands {username}")
+
+# new infomration
+num = 8
+print(f"Double of number {num} is {num * 2}")   
