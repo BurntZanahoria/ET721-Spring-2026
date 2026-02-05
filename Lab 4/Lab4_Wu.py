@@ -1,7 +1,7 @@
 """
 Justin Wu
 Feb 5, 2026
-Lab 4, dictionary
+Lab 4, Dictionary
 """
 print("\n----- Example 1: dictionary ")
 # declare and initialize a dictionary
