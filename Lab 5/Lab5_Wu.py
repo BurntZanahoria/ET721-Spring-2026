@@ -1,7 +1,7 @@
 """
 Justin Wu
 Feb 5, 2026
-Lab 5, Functions
+Lab 5, Function
 """
 import math
 from Lab5_Function_Wu import *
