@@ -4,6 +4,7 @@ Feb 5, 2026
 Lab 5, Functions
 """
 import math 
+import random
 # Example 1
 def area_rectangle(width, length):
     return width*length
@@ -32,4 +33,17 @@ def calculate_distance(x1,x2,y1,y2):
 def print_distance(x1,x2,y1,y2,distance):
     print(f"The distance of point ({x1},{y1}) and ({x2},{y2}) is {round(distance,2)}")
 
-# EXERCISE
+# EXERCISE: Guess a Number
+
+# Function that generates and returns a random number
+def generate_random_number(min_num, max_num):
+    return random.randint(min_num, max_num)
+
+# Function that compares the random number with the guess number
+def compare_numbers(random_number, guess_number):
+    if random_number < guess_number:
+        print("The number is smaller than the guess number")
+    elif random_number > guess_number:
+        print("The number is bigger than the guess number")
+    else:
+        print("You got it!")
