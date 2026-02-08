@@ -81,4 +81,31 @@ contacts.update({'Annie' : '718-888-9999'})
 print(f"{contacts}")
 
 
-print("\n----- EXERCISE")
+print("\n----- EXERCISE: write a Python file to read the number of users that use 'gmail', 'hotmail', or 'yahoo'")
+# List of users
+users = [
+    "peterpan@yahoo.com",
+    "annie@hotmail.com",
+    "Carl@hotmail.com",
+    "martha@gmail.com",
+    "cassie@yahoo.com",
+    "Josue@hotmail.com",
+    "John@hotmail.com"
+]
+# Stored email counts
+email_counts = {
+    "gmail": 0,
+    "hotmail": 0,
+    "yahoo": 0
+}
+
+# Loop through each email in the list
+for email in users:
+    if "gmail.com" in email:
+        email_counts["gmail"] += 1
+    elif "hotmail.com" in email:
+        email_counts["hotmail"] += 1
+    elif "yahoo.com" in email:
+        email_counts["yahoo"] += 1
+
+print(email_counts)
