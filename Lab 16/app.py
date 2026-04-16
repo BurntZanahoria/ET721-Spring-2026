@@ -47,13 +47,29 @@ def add_tasks():
     task = data.get('task')
 
     if task:
-        cursor = db.cursor
+        cursor = db.cursor()
         cursor.execute("INSERT INTO tasks (task) VALUES (%s)", (task,))
         db.commit()
         cursor.close()
         return jsonify({'status': 'success'})
     
     return jsonify({'status': 'error'})
+
+#---------------------
+# Delete a Task 
+#---------------------
+@app.route('/delete_tasks', methods = ['POST'])
+def delete_tasks():
+    data = request.get_json()
+    task_id = data.get('id')
+
+    cursor = db.cursor()
+    cursor.execute("DELETE FROM tasks WHERE id = %s", (task_id,))
+
+    db.commit()
+    cursor.close()
+
+    return jsonify({'status' : 'deleted'})
 
 #---------------------
 # Run App
